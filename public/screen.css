@@ -7,3 +7,67 @@ body {
   min-height: 100%;
   font: 16px / 1 sans-serif;
 }
+
+.flexBody {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box {
+  border: 2px dotted red;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  margin: 1em;
+}
+
+.text {
+  color: white;
+}
+
+.aSec {
+  background-color: blue;
+}
+
+.bSec {
+  background-color: green;
+}
+
+.cSec {
+  background-color: gold;
+}
+
+.dSec {
+  background-color: grey;
+}
+
+@media (max-width: 600px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .aSec {
+    width: 100%;
+  }
+  
+  .bSec {
+    flex-grow: 1;
+  }
+
+  .cSec {
+    flex-grow: 2;
+  }
+
+  .dSec {
+    width: 100%;
+  }
+
+  .inside {
+    flex-direction: row;
+  }
+}
